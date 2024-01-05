@@ -46,7 +46,7 @@ include "koneksi.php";
         </button>
 
         <!-- Modal -->
-        <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -54,12 +54,8 @@ include "koneksi.php";
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="POST" action="aksi.php">
-                        <div class="modal-body">
+                        <div class="modal-body ">
 
-                            <!-- <div class="mb-3">
-                                <label class="form-label">ID</label>
-                                <input class="form-control" placeholder="" name="tid">
-                            </div> -->
                             <div class="mb-3">
                                 <label class="form-label">FLT. NO: IP</label>
                                 <input class="form-control" placeholder="" name="tflt">
@@ -76,10 +72,26 @@ include "koneksi.php";
                                 <label class="form-label">DEP. A/P</label>
                                 <input class="form-control" placeholder="" name="tdep">
                             </div>
-                            <!-- <div class="mb-3">
-                                <table>
+                            <div class="mb-3">
+                                <label class="form-label">PRE/POST FLIGHT</label>
+                                <select class="form-select form-select-sm mb-3" aria-label="Large select example">
+                                    <option selected>pilihan</option>
+                                    // Tampilkan data dalam elemen select
+                                    <?php
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<option value="' . $row['id'] . '">' . $row['pilihan'] . '</option>';
+                                    }
+                                    ?>
+
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Emergency Equipment</label>
+                            </div>
+                            <div class="row ">
+                                <table class="table table-bordered">
                                     <tr>
-                                        <td>
+                                        <td style="width: 200px;">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                                 <label class="form-check-label" for="flexCheckDefault">
@@ -87,59 +99,147 @@ include "koneksi.php";
                                                 </label>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Lav. Smoke Detector
-                                                </label>
-                                            </div>
+                                        <td style="width: 300px;">
+                                            <label class="form-label">Quanty</label>
+                                            <input type="text" name="" id="">
                                         </td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Lav. Smoke Detector
-                                                </label>
-                                            </div>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">S</label>
                                         </td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Lav. Smoke Detector
-                                                </label>
-                                            </div>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">U/S</label>
                                         </td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Lav. Smoke Detector
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Lav. Smoke Detector
-                                                </label>
-                                            </div>
+                                            <label class="form-label">Remark</label>
+                                            <input type="text" name="" id="">
                                         </td>
                                     </tr>
                                 </table>
-                            </div> -->
+                            </div>
+                            <div class="row">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td style="width: 200px;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Lav. Built in Firex
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td style="width: 300px;">
+                                            <label class="form-label">Quanty</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">S</label>
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">U/S</label>
+                                        </td>
+                                        <td>
+                                            <label class="form-label">Remark</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td style="width: 200px;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Halon / BCF
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td style="width: 300px;">
+                                            <label class="form-label">Quanty</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">S</label>
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">U/S</label>
+                                        </td>
+                                        <td>
+                                            <label class="form-label">Remark</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td style="width: 200px;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    H2O
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td style="width: 300px;">
+                                            <label class="form-label">Quanty</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">S</label>
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">U/S</label>
+                                        </td>
+                                        <td>
+                                            <label class="form-label">Remark</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <table class="table table-bordered table-responsive">
+                                    <tr>
+                                        <td style="width: 200px;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Megaphone
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td style="width: 300px;">
+                                            <label class="form-label">Quanty</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">S</label>
+                                        </td>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-label">U/S</label>
+                                        </td>
+                                        <td>
+                                            <label class="form-label">Remark</label>
+                                            <input type="text" name="" id="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" name="bsimpan">Simpan</button>
@@ -182,13 +282,13 @@ include "koneksi.php";
                         <td><?= $data['dep'] ?></td>
                         <td>
                             <a href="" class="btn btn-info">View</a>
-                            <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $no ?>" >Edit</a>
-                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>" >Hapus</a>
+                            <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $no ?>">Edit</a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>
                     </tr>
 
                     <!-- Modal Edit -->
-                    <div class="modal fade modal-lg" id="editModal<?= $no ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade modal-xl" id="editModal<?= $no ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -196,7 +296,7 @@ include "koneksi.php";
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <form method="POST" action="aksi.php">
-                                    <input type="hidden" name="id_flight" value="<?=$data['id_flight']?>">
+                                    <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
                                     <div class="modal-body">
 
                                         <!-- <div class="mb-3">
@@ -283,6 +383,21 @@ include "koneksi.php";
                                                 </tr>
                                             </table>
                                         </div> -->
+                                        <div class="mb-3">
+                                            <label class="form-label">PRE/POST FLIGHT</label>
+                                            <select class="form-select form-select-sm mb-3" aria-label="Large select example">
+                                                <option selected>pilihan</option>
+                                                // Tampilkan data dalam elemen select
+                                                <?php
+                                                while ($row = $result->fetch_assoc()) {
+                                                    echo '<option value="' . $row['id'] . '">' . $row['pilihan'] . '</option>';
+                                                }
+                                                ?>
+
+                                            </select>
+                                        </div>
+                                        
+
                                     </div>
                                     <div class="modal-footer">
                                         <button type="submit" class="btn btn-primary" name="bubah">Edit</button>
@@ -303,15 +418,15 @@ include "koneksi.php";
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <form method="POST" action="aksi.php">
-                                    <input type="hidden" name="id_flight" value="<?=$data['id_flight']?>">
+                                    <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
                                     <div class="modal-body">
 
                                         <h5 class="text-center">
                                             Apakah anda yakin ingin menghapus data ini? <br>
-                                            <span class="text-danger"> <?=$data['flt']?> </span>
+                                            <span class="text-danger"> <?= $data['flt'] ?> </span>
 
                                         </h5>
-                                        
+
                                     </div>
                                     <div class="modal-footer">
                                         <button type="submit" class="btn btn-primary" name="bhapus">Delete</button>
