@@ -41,12 +41,14 @@ include "koneksi.php";
     <div class="container-fluid">
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambahkan Data
-        </button>
+        <a href="input.php">
+            <button type="button" class="btn btn-primary">
+                Tambahkan Data
+            </button>
+        </a>
 
         <!-- Modal -->
-        <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -249,7 +251,7 @@ include "koneksi.php";
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <table class="table table-dark table-responsive table-bodered table-striped-columns mt-2 text-center">
@@ -260,6 +262,7 @@ include "koneksi.php";
                     <th scope="col">A/C REG.: PK</th>
                     <th scope="col">DATE</th>
                     <th scope="col">DEP. A/P</th>
+                    <th scope="col">PRE/POST</th>
                     <th scope="col">ACTION</th>
                 </tr>
             </thead>
@@ -280,6 +283,7 @@ include "koneksi.php";
                         <td><?= $data['reg'] ?></td>
                         <td><?= $data['date'] ?></td>
                         <td><?= $data['dep'] ?></td>
+                        <td><?= $data['prepos'] ?></td>
                         <td>
                             <a href="" class="btn btn-info">View</a>
                             <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $no ?>">Edit</a>
@@ -396,7 +400,7 @@ include "koneksi.php";
 
                                             </select>
                                         </div>
-                                        
+
 
                                     </div>
                                     <div class="modal-footer">

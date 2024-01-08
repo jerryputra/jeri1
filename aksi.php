@@ -7,11 +7,12 @@ include "koneksi.php";
 if (isset($_POST['bsimpan'])) {
 
     // persiapan simpan data
-    $simpan = mysqli_query($koneksi, "INSERT INTO title_flight(flt, reg, date, dep)
+    $simpan = mysqli_query($koneksi, "INSERT INTO title_flight(flt, reg, date, dep, prepos)
                                       VALUES('$_POST[tflt]',
                                              '$_POST[treg]',
                                              '$_POST[tdate]',
-                                             '$_POST[tdep]') ");
+                                             '$_POST[tdep]',
+                                             '$_POST[tprs]') ");
 
 
     //jika simpan sukses 
