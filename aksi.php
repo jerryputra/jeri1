@@ -7,12 +7,15 @@ include "koneksi.php";
 if (isset($_POST['bsimpan'])) {
 
     // persiapan simpan data
-    $simpan = mysqli_query($koneksi, "INSERT INTO title_flight(flt, reg, date, dep, prepos)
-                                      VALUES('$_POST[tflt]',
-                                             '$_POST[treg]',
-                                             '$_POST[tdate]',
-                                             '$_POST[tdep]',
-                                             '$_POST[tprs]') ");
+    
+    $emergencyValues = implode(', ', $_POST['emergency']);
+    $simpan = mysqli_query($koneksi, "INSERT INTO title_flight(flt, reg, date, dep, prepos, emergency)
+                                  VALUES('$_POST[tflt]',
+                                         '$_POST[treg]',
+                                         '$_POST[tdate]',
+                                         '$_POST[tdep]',
+                                         '$_POST[tprs]', 
+                                         '$emergencyValues')");
 
 
     //jika simpan sukses 
@@ -21,7 +24,7 @@ if (isset($_POST['bsimpan'])) {
                 alert('Simpan data sukses!');
                 document.location='index.php';
              </script>";
-    }else{
+    } else {
         echo "<script>
                 alert('Simpan data gagal!');
                 document.location='index.php';
@@ -49,7 +52,7 @@ if (isset($_POST['bubah'])) {
                 alert('Ubah data sukses!');
                 document.location='index.php';
              </script>";
-    }else{
+    } else {
         echo "<script>
                 alert('Ubah data gagal!');
                 document.location='index.php';
@@ -71,7 +74,7 @@ if (isset($_POST['bhapus'])) {
                 alert('Hapus data sukses!');
                 document.location='index.php';
              </script>";
-    }else{
+    } else {
         echo "<script>
                 alert('Hapus data gagal!');
                 document.location='index.php';

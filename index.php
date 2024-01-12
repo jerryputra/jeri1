@@ -10,7 +10,7 @@ include "koneksi.php";
 <html>
 
 <head>
-    <title>Document</title>
+    <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
@@ -18,7 +18,7 @@ include "koneksi.php";
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" style="background-color: slategray" ;>
-            <a class="navbar-brand" href="#"><img src="pelita.png" alt="" style="width: 100px;"></a>
+            <a class="navbar-brand" href="index.php"><img src="pelita.png" alt="" style="width: 100px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -263,6 +263,7 @@ include "koneksi.php";
                     <th scope="col">DATE</th>
                     <th scope="col">DEP. A/P</th>
                     <th scope="col">PRE/POST</th>
+                    <th scope="col">Emergency Equipment</th>
                     <th scope="col">ACTION</th>
                 </tr>
             </thead>
@@ -284,6 +285,7 @@ include "koneksi.php";
                         <td><?= $data['date'] ?></td>
                         <td><?= $data['dep'] ?></td>
                         <td><?= $data['prepos'] ?></td>
+                        <td><?= $data['emergency'] ?></td>
                         <td>
                             <a href="" class="btn btn-info">View</a>
                             <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $no ?>">Edit</a>
