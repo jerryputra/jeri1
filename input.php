@@ -72,45 +72,80 @@ include "koneksi.php";
             <div class="mb-3">
                 <label class="form-label"><b>Emergency Equipment</b></label>
             </div>
-            <div class="row ">
-                <div class="col-6">
+            <div class="row mb-5">
+                <div class="col-2">
                     <label for="emer1">
-                    <input type="checkbox" name="emergency[]" id="emer1" value="Lav Smoke Detector" style="margin-left: 5px;">   Lav Smoke Detector</label>
+                        <input type="checkbox" name="emergency[]" id="emer1" value="Lav Smoke Detector" style="margin-left: 5px;"> Lav Smoke Detector</label>
                 </div>
-                <div class="col-6">
+                <div class="col-3">
                     <label for="emer2">
-                    <input type="checkbox" name="emergency[]" id="emer2" value="flashlight" style="margin-left: 5px;">   flashlight</label>
+                        Quanty <input type="number" name="emergency[]" id="emer2" value="Quanty" style="margin-left: 5px;">
+                    </label>
                 </div>
-                <!-- <table class="table table-bordered">
-                    <tr>
-                        <td style="width: 200px;">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Lav. Smoke Detector" name="emer[]">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Lav. Smoke Detector
-                                </label>
-                            </div>
-                        </td>
-                        <td style="width: 300px;">
-                            <label class="form-label-sm">Quanty</label>
-                            <input type="number" name="" id="">
-                        </td>
-                        <td>
-                            <input class="form-check-input" type="checkbox" name="temer" value="s" id="flexCheckDefault">
-                            <label class="form-label">S</label>
-                        </td>
-                        <td>
-                            <input class="form-check-input" type="checkbox" name="temer" value="U/S" id="flexCheckDefault">
-                            <label class="form-label">U/S</label>
-                        </td>
-                        <td>
-                            <label class="form-label-sm">Remark</label>
-                            <input type="text" name="" id="">
-                        </td>
-                    </tr>
-                </table> -->
+                <div class="col-1">
+                    <label for="emer3">
+                        <input type="checkbox" name="emergency[]" id="emer3" value="S" > S</label>
+                </div>
+                <div class="col-1">
+                    <label for="emer4">
+                        <input type="checkbox" name="emergency[]" id="emer4" value="U/S" > U/S</label>
+                </div>
+                <div class="col-3 ">
+                    <label for="emer5">
+                        Remark <input type="text" name="emergency[]" id="emer5" value="" style="margin-left: 5px;"> 
+                    </label>
+                </div>
+            </div>
+            <div class="row mb-5 ">
+                <div class="col-2">
+                    <label for="emer1">
+                        <input type="checkbox" name="emergency[]" id="emer1" value="Lav Built in Firex" style="margin-left: 5px;"> Lav Built in Firex</label>
+                </div>
+                <div class="col-3">
+                    <label for="emer2">
+                        Quanty <input type="number" name="emergency[]" id="emer2" value="Quanty" style="margin-left: 5px;">
+                    </label>
+                </div>
+                <div class="col-1">
+                    <label for="emer3">
+                        <input type="checkbox" name="emergency[]" id="emer3" value="S" > S</label>
+                </div>
+                <div class="col-1">
+                    <label for="emer4">
+                        <input type="checkbox" name="emergency[]" id="emer4" value="U/S" > U/S</label>
+                </div>
+                <div class="col-3">
+                    <label for="emer5">
+                        Remark <input type="text" name="emergency[]" id="emer5" value="" style="margin-left: 5px;"> 
+                    </label>
+                </div>
+            </div>
+            <div class="row mb-5 "> 
+                <div class="col-2">
+                    <label for="emer1">
+                        <input type="checkbox" name="emergency[]" id="emer1" value="Halon / BCF" style="margin-left: 5px;"> Halon / BCF</label>
+                </div>
+                <div class="col-3">
+                    <label for="emer2">
+                        Quanty <input type="number" name="emergency[]" id="emer2" value="Quanty" style="margin-left: 5px;">
+                    </label>
+                </div>
+                <div class="col-1">
+                    <label for="emer3">
+                        <input type="checkbox" name="emergency[]" id="emer3" value="S" > S</label>
+                </div>
+                <div class="col-1">
+                    <label for="emer4">
+                        <input type="checkbox" name="emergency[]" id="emer4" value="U/S" > U/S</label>
+                </div>
+                <div class="col-3">
+                    <label for="emer5">
+                        Remark <input type="text" name="emergency[]" id="emer5" value="" style="margin-left: 5px;"> 
+                    </label>
+                </div>
             </div>
             
+
 
 
             <div class="mt-3">

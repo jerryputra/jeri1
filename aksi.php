@@ -8,7 +8,7 @@ if (isset($_POST['bsimpan'])) {
 
     // persiapan simpan data
     
-    $emergencyValues = implode(', ', $_POST['emergency']);
+    $emergencyValues = implode(',', $_POST['emergency']);
     $simpan = mysqli_query($koneksi, "INSERT INTO title_flight(flt, reg, date, dep, prepos, emergency)
                                   VALUES('$_POST[tflt]',
                                          '$_POST[treg]',

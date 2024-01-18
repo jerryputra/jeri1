@@ -10,7 +10,7 @@ include "koneksi.php";
 <html>
 
 <head>
-    <title>Dashboard</title>
+    <title>Dashboarda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
@@ -273,9 +273,9 @@ include "koneksi.php";
 
                 // persiapan menampikan data
                 $no = 1;
-                $tampil = mysqli_query($koneksi, "SELECT * FROM title_flight ORDER BY id_flight DESC");
+                $tampil = mysqli_query($koneksi, "SELECT * FROM title_flight ORDER BY id_flight ASC");
                 while ($data = mysqli_fetch_array($tampil)) :
-
+ 
 
                 ?>
                     <tr>
@@ -288,13 +288,13 @@ include "koneksi.php";
                         <td><?= $data['emergency'] ?></td>
                         <td>
                             <a href="" class="btn btn-info">View</a>
-                            <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $no ?>">Edit</a>
+                            <a href="edit.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>
                     </tr>
 
                     <!-- Modal Edit -->
-                    <div class="modal fade modal-xl" id="editModal<?= $no ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- <div class="modal fade modal-xl" id="editModal<?= $no ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -304,11 +304,6 @@ include "koneksi.php";
                                 <form method="POST" action="aksi.php">
                                     <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
                                     <div class="modal-body">
-
-                                        <!-- <div class="mb-3">
-                                <label class="form-label">ID</label>
-                                <input class="form-control" placeholder="" name="tid">
-                            </div> -->
                                         <div class="mb-3">
                                             <label class="form-label">FLT. NO: IP</label>
                                             <input class="form-control" placeholder="" name="tflt" value="<?= $data['flt'] ?>">
@@ -325,70 +320,7 @@ include "koneksi.php";
                                             <label class="form-label">DEP. A/P</label>
                                             <input class="form-control" placeholder="" name="tdep" value="<?= $data['dep'] ?>">
                                         </div>
-                                        <!-- <div class="mb-3">
-                                            <table>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Lav. Smoke Detector
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div> -->
+                                        
                                         <div class="mb-3">
                                             <label class="form-label">PRE/POST FLIGHT</label>
                                             <select class="form-select form-select-sm mb-3" aria-label="Large select example">
@@ -413,7 +345,7 @@ include "koneksi.php";
 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Modal Delete -->
                     <div class="modal fade modal-lg" id="deleteModal<?= $no ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
