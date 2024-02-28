@@ -262,8 +262,6 @@ include "koneksi.php";
                     <th scope="col">A/C REG.: PK</th>
                     <th scope="col">DATE</th>
                     <th scope="col">DEP. A/P</th>
-                    <th scope="col">PRE/POST</th>
-                    <th scope="col">Emergency Equipment</th>
                     <th scope="col">ACTION</th>
                 </tr>
             </thead>
@@ -284,10 +282,8 @@ include "koneksi.php";
                         <td><?= $data['reg'] ?></td>
                         <td><?= $data['date'] ?></td>
                         <td><?= $data['dep'] ?></td>
-                        <td><?= $data['prepos'] ?></td>
-                        <td><?= $data['emergency'] ?></td>
                         <td>
-                            <a href="" class="btn btn-info">View</a>
+                            <a href="view.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
                             <a href="edit.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>

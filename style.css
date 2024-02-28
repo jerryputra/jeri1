@@ -1,0 +1,7 @@
+input[type="number"] {
+    pointer-events: none;
+}
+
+input[type="checkbox"] {
+    pointer-events: none;
+}
