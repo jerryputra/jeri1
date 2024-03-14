@@ -66,7 +66,7 @@ include "koneksi.php";
                         </td>
                         <td colspan="4">
                             <!-- <input class="form-control" placeholder="Masukan Kode Departure" name="tdep"> -->
-                            <select class="form-control" name="tdep">
+                            <select class="form-control" name="tdep ">
                                 <option selected>Pilihan</option>
                                 <option value="JKT">JKT</option>
                                 <option value="BDG">BDG</option>
