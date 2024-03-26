@@ -283,7 +283,7 @@ include "koneksi.php";
                         <td><?= $data['date'] ?></td>
                         <td><?= $data['dep'] ?></td>
                         <td>
-                            <a href="view.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
+                            <a href="cetak.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
                             <a href="edit.php?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>

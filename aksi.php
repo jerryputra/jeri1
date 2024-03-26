@@ -458,7 +458,7 @@ if (isset($_POST['bubah'])) {
      
      $quantyValue = $_POST['qty'];
  
-     $s_status = isset($_POST['s_status']) ? 1 : 0; // Jika checkbox tercentang, nilainya 1; jika tidak, nilainya 0
+     $s_status = isset($_POST['s_status']) ? $_POST['s_status'] : 0; // Jika checkbox tercentang, nilainya 1; jika tidak, nilainya 0
      $us_status = isset($_POST["us_status"]) ? 1 : 0;
      $s_status2 = isset($_POST['s_status2']) ? 1 : 0; // Jika checkbox tercentang, nilainya 1; jika tidak, nilainya 0
      $us_status2 = isset($_POST["us_status2"]) ? 1 : 0;
